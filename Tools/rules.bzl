@@ -23,6 +23,7 @@ def pyx_library(
         name,
         deps=[],
         srcs=[],
+        data=[],
         cython_directives=[],
         cython_options=[],
         **kwargs):
@@ -65,6 +66,6 @@ def pyx_library(
         name=name,
         srcs=py_srcs,
         deps=deps,
-        data=outs + pyx_srcs + pxd_srcs,
+        data=outs + pyx_srcs + pxd_srcs + data,
         **kwargs
     )
